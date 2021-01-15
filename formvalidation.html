@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>validation in javascript</title>
+</head>
+<body>
+	<center>
+	<h1>validation in javascript</h1>
+	<form name="myform" method="post" onsubmit=" return validpassword()"action="sucess.html">
+		password:<input type="password" name="pass1">
+		<br>
+		conform password:<input type="password" name="pass2">
+		<br><br>
+        <input type="submit" name="check">
+</form>
+	<script>
+		function validpassword() {
+			var password=document.myform.pass1.value;
+			var cpassword=document.myform.pass2.value;
+			if(password.length<6){
+				alert("password must contain 6 characters");
+				return false;
+			}
+			if(password==cpassword){
+				return true;
+			}
+			else{
+				alert("password and conform password must br same");
+				return false;
+			}
+		}
+
+	</script>
+</center>
+</body>
+</html>
